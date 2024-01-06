@@ -1,9 +1,32 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main></main>
+  <main>
+    <section class="w-[600px] mx-auto lg:x-[740px] py-36 pb-4">
+      <img
+        class="rounded-full w-12 h-12 mb-4"
+        src="https://i.pinimg.com/736x/99/62/c1/9962c1aa9675b161e7083b3530e78998.jpg"
+        alt="Profile photo"
+      />
+      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-2 pb-4">
+        Hey, soy Gonza <div class="flex justify-center items-center">
+          <Badge>Disponible para trabajar</Badge>
+        </div>
+      </h1>
+      <h2 class="text-xl opacity-80 text-wrap">
+        <span>5 años de experiencia.</span>
+        <span class="text-yellow-200/90">Desarrollador de bugs.</span>
+        <br />
+        <span class="text-red-200/90">Soy de Buenos Aires, Argentina 🇦🇷.</span>
+        <span class="opacity-85">
+          Especializado en aplicaciones de nicho con mapas y blockchain
+        </span>
+      </h2>
+    </section>
+  </main>
 </Layout>
 
 <style></style>
