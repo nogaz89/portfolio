@@ -1,0 +1,40 @@
+---
+import ProyectsItems from "./ProyectsItems.astro";
+import ReactIcon from "../icons/React.astro";
+import MapboxIcon from "../icons/Mapbox.astro";
+import MuiIcon from "../icons/Mui.astro";
+
+const TAGS = {
+  React: {
+    name: "React",
+    class: "bg-sky-500",
+    icon: ReactIcon,
+  },
+  mapbox: {
+    name: "Mapbox",
+    class: "bg-sky-500",
+    icon: MapboxIcon,
+  },
+  "material-ui": {
+    name: "Material UI",
+    class: "bg-sky-500",
+    icon: MuiIcon,
+  },
+};
+const PROYECTS = [
+  {
+    title: "Ciudad 3d",
+    link: "https://ciudad3d.buenosaires.gob.ar/",
+    github: "https://github.com/datosgcba/Ciudad-3D",
+    image: "/projects/proj1.webp",
+    tags: [TAGS.React, TAGS.mapbox, TAGS["material-ui"]],
+    description: `
+      Ciudad 3D es una plataforma de visualización de datos geoespaciales de la Ciudad de Buenos Aires.
+      La plataforma permite visualizar datos de la Ciudad en 3D,
+      navegar por el mapa, realizar mediciones y consultar información de los objetos 3D.
+    `,
+  },
+];
+---
+
+{PROYECTS.map((proyect) => <ProyectsItems {...proyect} />)}
