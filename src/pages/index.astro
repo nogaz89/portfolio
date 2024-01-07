@@ -1,9 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
+import GitHubIcon from "../icons/GitHub.astro";
+import LinkedInIcon from "../icons/LinkedIn.astro";
+import MailIcon from "../icons/Mail.astro";
+import SocialPill from "../components/SocialPill.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout
+  title="GLopez - Desarrollador web"
+  description="Desarrollador web con 5 años de experiencia."
+>
   <main>
     <section class="w-[600px] mx-auto lg:x-[740px] py-36 pb-4">
       <img
@@ -25,6 +32,23 @@ import Badge from "../components/Badge.astro";
           Especializado en aplicaciones de nicho con mapas y blockchain
         </span>
       </h2>
+
+      <nav class="flex gap-x-4 mt-4">
+        <SocialPill href="https://github.com/nogaz89">
+          <GitHubIcon class="w-6 h-6" />
+          GitHub
+        </SocialPill>
+
+        <SocialPill href="https://www.linkedin.com/in/lopezgonzalo89/">
+          <LinkedInIcon class="w-6 h-6" />
+          LinkedIn
+        </SocialPill>
+
+        <SocialPill href="lopezgonzalo.sm89@gmail.com">
+          <MailIcon class="w-6 h-6" />
+          lopezgonzalo.sm89@gmail.com
+        </SocialPill>
+      </nav>
     </section>
   </main>
 </Layout>
